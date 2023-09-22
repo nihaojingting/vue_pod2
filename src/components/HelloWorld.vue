@@ -3,10 +3,10 @@
     <h1>{{ msg }}</h1>
   </div>
   <div class="card">
-    <img alt="real estate logo" src="https://i.imgur.com/XPC2j0i.jpg">
+    <img alt="me at library" src="https://i.imgur.com/XPC2j0i.jpg">
     <div class="card-content"> 
-      <h2>Two Pod Realty</h2> 
-      <p id="description">Real Estate Company Focused on delivering the best properties in the State College Area</p> 
+      <h2>Jing-Ting at the Library</h2> 
+      <p id="description">Hi my name is Jing-Ting Dong. This is an image of me giving a thumbs up at the library while working on this coding project. I like cabbage. I also like bacon. I really like eating but it gives me food coma. Bygolly, what a dilemma.</p> 
       <button class="details-button" id="detailsBtn">Details</button>
     </div> 
   </div> 
