@@ -11,10 +11,11 @@
     </div> 
   </div> 
   
-  <button id="btn">Duplicator</button>
-  <button id="colorBtn">BGColorChanger</button>
-  <button id="Headingbtn">HeadingChanger</button>
-  <button id="dltbtn">DeleteCard</button>
+  <button id="duplicateButton">Duplicator</button>
+  <button id="toggleButton">Toggle Background</button>
+  <button id="changeHeadingButton">Change Heading</button>
+  <button id="removeDuplicate">Remove A Card</button>
+
 </template>
 
 <script>
@@ -24,9 +25,10 @@ export default {
     msg: String
   },
   mounted() {
-    document.querySelector('#btn').addEventListener('click', () => {
+    document.querySelector('#duplicateButton').addEventListener('click', () => {
       const clone = document.querySelector('.card').cloneNode(true); // Clone the whole card
       document.body.appendChild(clone);
+
     });
     
     var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -41,20 +43,20 @@ export default {
       return color;
     }
     
-    document.querySelector('#colorBtn').addEventListener('click', () => {
+    document.querySelector('#toggleButton').addEventListener('click', () => {
       const card = document.querySelector('.card');
       // Change background color
       card.style.backgroundColor = '#' + randomColor();
     });
     
     // HEADING CHANGER
-    document.querySelector('#Headingbtn').addEventListener('click', () => {
+    document.querySelector('#changeHeadingButton').addEventListener('click', () => {
       const title = document.querySelector('h2');
-      title.innerText = "Super Pod 2 Realty";
+      title.innerText = "CABBAGES CABBAGES CABBAGES";
     });
     
     // Card delete
-    document.querySelector('#dltbtn').addEventListener('click', () => {
+    document.querySelector('#removeDuplicate').addEventListener('click', () => {
       const cards = document.querySelectorAll('.card');
       // Check if there are cards to delete
       if (cards.length > 1) {
@@ -75,6 +77,9 @@ export default {
       }
     });
   }
+
+
+
 }
 </script>
 
